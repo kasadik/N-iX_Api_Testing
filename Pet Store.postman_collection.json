@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "3c8fc692-0f91-4282-878a-b3a07ad6a922",
+		"name": "Pet Store",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add Pet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\": 0,\r\n\"category\": {\r\n\"id\": 0,\r\n\"name\": \"string\"\r\n},\r\n\"name\": \"doggie\",\r\n\"photoUrls\": [\r\n\"string\"\r\n],\r\n\"tags\": [\r\n{\r\n\"id\": 0,\r\n\"name\": \"string\"\r\n}\r\n],\r\n\"status\": \"available\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/pet",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"pet"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "special-key",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show Pet",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/pet/9223127596080586625",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"pet",
+						"9223127596080586625"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "special-key",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Pet",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\": 9223127596080586625,\r\n\"category\": {\r\n\"id\": 0,\r\n\"name\": \"Kek\"\r\n},\r\n\"name\": \"doggie\",\r\n\"photoUrls\": [\r\n\"string\"\r\n],\r\n\"tags\": [\r\n{\r\n\"id\": 0,\r\n\"name\": \"string\"\r\n}\r\n],\r\n\"status\": \"available\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/pet",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Pet",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/pet/9223127596080586625",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"pet",
+						"9223127596080586625"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
